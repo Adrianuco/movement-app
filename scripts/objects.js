@@ -1,5 +1,3 @@
-import { mp_vx, mp_vy, mp_x, mp_y, mrua_y } from "./physics.js";
-
 class Proyectil {
   constructor(x0, y0, v0, theta) {
     // Condiciones iniciales
@@ -52,7 +50,7 @@ class Objetivo {
     this.t += dt;
 
     // Caída libre
-    this.y = mrua_y(this.y0, 0, this.t);
+    this.y = mrua_y(this.y0, this.t);
   }
 }
 
@@ -66,5 +64,3 @@ class Entorno {
     this.t += this.dt;
   }
 }
-
-export { Proyectil, Objetivo, Entorno };

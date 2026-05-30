@@ -30,8 +30,8 @@ function mp_x(x0, Vx, t) {
 }
 
 // Posicion Vertical del Proyectil
-function mp_y(y0, v0, theta, t, vy) {
-  return y0 + vy * t - (1 / 2) * 9.8 * t ** 2;
+function mp_y(y0, v0, theta, t) {
+  return y0 + v0 * Math.sin(theta) * t - (1 / 2) * 9.8 * t ** 2;
 }
 
 // Angulo del proyectil
