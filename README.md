@@ -2,10 +2,6 @@
 
 > Simulación interactiva del experimento clásico de la bola y el mono, desarrollada con JavaScript y p5.js para visualizar y analizar el movimiento parabólico y la caída libre.
 
-JavaScript
-p5.js
-Physics
-
 ---
 
 ## 📖 Descripción
@@ -109,8 +105,20 @@ se considera que ocurrió una colisión.
 
 ## 🏗️ Estructura del Proyecto
 
-text project/ │ ├── index.html │ ├── scripts/ │   ├── physics.js │   ├── objects.js │   └── sketch.js │ ├── styles/ │   └── style.css │ └── README.md 
-
+```text
+project/
+│
+├── index.html
+│
+├── scripts/
+│   ├── physics.js
+│   ├── objects.js
+│   └── sketch.js
+│
+├── style.css
+│
+└── README.md
+```
 ### physics.js
 
 Contiene las funciones matemáticas y físicas utilizadas por la simulación:
