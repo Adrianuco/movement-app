@@ -43,6 +43,19 @@ class Objetivo {
 
     // Tiempo interno
     this.t = 0;
+
+    this.colision = false;
+  }
+
+  checkColision(proyectil, tolerancia) {
+    const dx = Math.abs(this.x - proyectil.x);
+    const dy = Math.abs(this.y - proyectil.y);
+    const distancia = Math.hypot(dx, dy);
+    console.log(`Distancia al objetivo: ${distancia.toFixed(4)} metros`);
+
+    if (distancia < tolerancia) {
+      this.colision = true;
+    }
   }
 
   actualizar(dt) {
@@ -56,7 +69,7 @@ class Objetivo {
 
 class Entorno {
   constructor() {
-    this.dt = 0.016;
+    this.dt = 0.0016;
     this.t = 0;
     this.pausado = true;
   }

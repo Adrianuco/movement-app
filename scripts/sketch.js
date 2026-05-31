@@ -3,7 +3,7 @@
 let entorno;
 let proyectil;
 let objetivo;
-let x0, y0, v0, objetivoX, objetivoY;
+let x0, y0, v0, objetivoX, objetivoY, toleranciaColision;
 
 const PIXELS_PER_METER = 60;
 
@@ -15,7 +15,7 @@ function restablecerSimulacion() {
   entorno = null;
   proyectil = null;
   objetivo = null;
-  x0 = y0 = v0 = objetivoX = objetivoY = null;
+  x0 = y0 = v0 = objetivoX = objetivoY = toleranciaColision = null;
 
   const divTiempo = document.getElementsByClassName("card-tiempo");
   divTiempo[0].textContent = `Tiempo: 0.00s`;
@@ -31,6 +31,8 @@ function iniciarSimulacion() {
   objetivoY = document.getElementById("objetivoY").valueAsNumber;
 
   v0 = document.getElementById("proyectilV").valueAsNumber;
+  toleranciaColision =
+    document.getElementById("toleranciaColision").valueAsNumber;
 
   entorno = new Entorno();
 
@@ -99,8 +101,12 @@ function draw() {
 
     proyectil.actualizar(entorno.dt);
     objetivo.actualizar(entorno.dt);
-    console.log("proyectil:", proyectil);
-    console.log("objetivo:", objetivo);
+    objetivo.checkColision(proyectil, toleranciaColision);
+    if (objetivo.colision) {
+      console.log("Colision!");
+      entorno.pausado = true;
+      return;
+    }
   }
 
   fill(255, 120, 120);
