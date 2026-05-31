@@ -6,7 +6,7 @@
 
 ## 📖 Descripción
 
-Este proyecto implementa una simulación del experimento conocido como "Monkey and Hunter", utilizado en física para demostrar que dos objetos sometidos a la misma aceleración gravitatoria experimentan la misma caída vertical independientemente de su movimiento horizontal.
+Este proyecto implementa una simulación del experimento conocido como "Shoot the Monkey", utilizado en física para demostrar que dos objetos sometidos a la misma aceleración gravitatoria experimentan la misma caída vertical independientemente de su movimiento horizontal.
 
 La simulación permite:
 
@@ -50,59 +50,85 @@ Demostrar mediante simulación computacional los principios de:
 - GitHub
 
 ---
-
 ## 🧠 Fundamento Físico
 
 ### Movimiento Parabólico
 
-Componente horizontal:
+El proyectil se modela mediante un movimiento parabólico compuesto por una componente horizontal uniforme y una componente vertical acelerada por la gravedad.
 
+**Componente horizontal de la velocidad**
+
+```txt
 vx = v0 · cos(θ)
+```
 
-Posición horizontal:
+**Posición horizontal**
 
+```txt
 x(t) = x0 + vx · t
+```
 
----
+**Componente vertical de la velocidad**
 
-Componente vertical:
-
+```txt
 vy(t) = v0 · sin(θ) - g · t
+```
 
-Posición vertical:
+**Posición vertical**
 
-y(t) = y0 + vy₀ · t - ½gt²
+```txt
+y(t) = y0 + vy₀ · t - ½ · g · t²
+```
 
 ---
 
 ### Caída Libre
 
-Posición vertical del objetivo:
+El objetivo se encuentra inicialmente en reposo y cae únicamente bajo la acción de la gravedad.
 
-y(t) = y0 - ½gt²
+**Posición vertical del objetivo**
+
+```txt
+y(t) = y0 - ½ · g · t²
+```
 
 ---
 
 ### Ángulo de Disparo
 
+El ángulo inicial del proyectil se calcula a partir de las posiciones iniciales del proyectil y del objetivo.
+
+```txt
 θ = arctan((yobjetivo - yproyectil) / distancia)
+```
 
 ---
 
 ### Detección de Colisión
 
-La distancia entre ambos objetos se calcula mediante:
+La distancia entre ambos objetos se calcula utilizando la distancia euclidiana.
 
+```txt
 d = √[(x₂ - x₁)² + (y₂ - y₁)²]
+```
 
-Si:
+Se considera que ocurre una colisión cuando:
 
-d < margen de tolerancia ingresado
+```txt
+d < tolerancia
+```
 
-se considera que ocurrió una colisión.
+donde la tolerancia es un valor configurable por el usuario.
 
 ---
 
+### Aceleración de la Gravedad
+
+En toda la simulación se utiliza el valor estándar de la gravedad terrestre:
+
+```txt
+g = 9.8 m/s²
+```
 ## 🏗️ Estructura del Proyecto
 
 ```text
@@ -154,11 +180,16 @@ Controla:
 
 ### 1. Clonar el repositorio
 
-bash git clone <url-del-repositorio> 
+```txt 
+git clone https://github.com/Adrianuco/movement-app.git
+```
 
 ### 2. Abrir el proyecto
 
-bash cd <nombre-del-proyecto> 
+
+```txt 
+cd movement-app
+```
 
 ### 3. Iniciar un servidor local
 
