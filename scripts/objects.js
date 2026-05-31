@@ -58,9 +58,12 @@ class Entorno {
   constructor() {
     this.dt = 0.016;
     this.t = 0;
+    this.pausado = true;
   }
 
   actualizar() {
-    this.t += this.dt;
+    if (!this.pausado) {
+      this.t += this.dt;
+    }
   }
 }

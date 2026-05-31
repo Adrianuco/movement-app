@@ -20,7 +20,7 @@
         objetos.
       </p>
       <div class="card-gravedad">Gravedad: 9.8 m/s<sup>2</sup></div>
-      <div class="card-tiempo">Tiempo:</div>
+      <div class="card-tiempo"></div>
     </header>
     <main class="global-container">
       <form class="data-container">
@@ -28,31 +28,31 @@
           <legend>Datos del Objetivo</legend>
           <div class="input-container">
             <label for="objetvivoX">Posicion X (m)</label>
-            <input type="text" name="objetivoX" id="objetivoX" />
+            <input type="number" name="objetivoX" id="objetivoX" />
           </div>
           <div class="input-container">
             <label for="objetvivoY">Posicion Y (m)</label>
-            <input type="text" name="objetivoY" id="objetivoY" />
+            <input type="number" name="objetivoY" id="objetivoY" />
           </div>
         </fieldset>
         <fieldset class="data-proyectil">
           <legend>Datos del Proyectil</legend>
           <div class="input-container">
             <label for="proyectilX">Posicion X (m)</label>
-            <input type="text" name="proyectilX" id="proyectilX" />
+            <input type="number" name="proyectilX" id="proyectilX" />
           </div>
           <div class="input-container">
             <label for="proyectilY">Posicion Y (m)</label>
-            <input type="text" name="proyectilY" id="proyectilY" />
+            <input type="number" name="proyectilY" id="proyectilY" />
           </div>
           <div class="input-container">
             <label for="proyectilV">Velocidad Inicial (m/s)</label>
-            <input type="text" name="proyectilV" id="proyectilV" />
+            <input type="number" name="proyectilV" id="proyectilV" />
           </div>
         </fieldset>
         <div class="button-container">
-          <button>Restablecer</button>
-          <button>Aplicar</button>
+          <button id="btnRestablecer" type="button">Restablecer</button>
+          <button id="btnAplicar" type="button">Aplicar</button>
         </div>
       </form>
       <div id="canvas-container"></div>
