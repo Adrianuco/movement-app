@@ -20,18 +20,35 @@
         objetos.
       </p>
       <div class="card-gravedad">Gravedad: 9.8 m/s<sup>2</sup></div>
-      <div class="card-tiempo"></div>
+      <div class="card-tiempo">Tiempo: 0.00s</div>
+      <p id="collision-message" class="collision-message hidden">
+        Colisión detectada. La simulación se detuvo.
+      </p>
+      <section class="position-cards">
+        <div class="position-card">
+          <span class="position-card__label">Proyectil</span>
+          <span id="proyectil-position" class="position-card__value">
+            X: 0 m | Y: 0 m
+          </span>
+        </div>
+        <div class="position-card">
+          <span class="position-card__label">Objetivo</span>
+          <span id="objetivo-position" class="position-card__value">
+            X: 0 m | Y: 0 m
+          </span>
+        </div>
+      </section>
     </header>
     <main class="global-container">
       <form class="data-container">
         <fieldset class="data-objetivo">
           <legend>Datos del Objetivo</legend>
           <div class="input-container">
-            <label for="objetvivoX">Posicion X (m)</label>
+            <label for="objetivoX">Posicion X (m)</label>
             <input type="number" name="objetivoX" id="objetivoX" />
           </div>
           <div class="input-container">
-            <label for="objetvivoY">Posicion Y (m)</label>
+            <label for="objetivoY">Posicion Y (m)</label>
             <input type="number" name="objetivoY" id="objetivoY" />
           </div>
         </fieldset>
@@ -48,6 +65,17 @@
           <div class="input-container">
             <label for="proyectilV">Velocidad Inicial (m/s)</label>
             <input type="number" name="proyectilV" id="proyectilV" />
+          </div>
+        </fieldset>
+        <fieldset class="data-tolerancia">
+          <legend>Tolerancia de Colisión</legend>
+          <div class="input-container">
+            <label for="toleranciaColision">Margen de tolerancia (m)</label>
+            <input
+              type="number"
+              name="toleranciaColision"
+              id="toleranciaColision"
+            />
           </div>
         </fieldset>
         <div class="button-container">
