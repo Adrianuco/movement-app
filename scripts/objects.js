@@ -69,7 +69,7 @@ class Objetivo {
 
 class Entorno {
   constructor() {
-    this.dt = 0.0016;
+    this.dt = 0.016;
     this.t = 0;
     this.pausado = true;
   }

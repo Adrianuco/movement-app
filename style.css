@@ -39,6 +39,50 @@ header > div {
   font-weight: 600;
 }
 
+.collision-message {
+  margin: 8px 0 0;
+  color: #ff9aa7;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.position-cards {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.position-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 190px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #244160;
+  background: rgba(12, 29, 51, 0.9);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.position-card__label {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8fb3d9;
+}
+
+.position-card__value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f4f7fb;
+}
+
+.hidden {
+  display: none !important;
+}
+
 .global-container {
   max-width: 1400px;
   margin: 0 auto;

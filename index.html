@@ -20,7 +20,24 @@
         objetos.
       </p>
       <div class="card-gravedad">Gravedad: 9.8 m/s<sup>2</sup></div>
-      <div class="card-tiempo"></div>
+      <div class="card-tiempo">Tiempo: 0.00s</div>
+      <p id="collision-message" class="collision-message hidden">
+        Colisión detectada. La simulación se detuvo.
+      </p>
+      <section class="position-cards">
+        <div class="position-card">
+          <span class="position-card__label">Proyectil</span>
+          <span id="proyectil-position" class="position-card__value">
+            X: 0 m | Y: 0 m
+          </span>
+        </div>
+        <div class="position-card">
+          <span class="position-card__label">Objetivo</span>
+          <span id="objetivo-position" class="position-card__value">
+            X: 0 m | Y: 0 m
+          </span>
+        </div>
+      </section>
     </header>
     <main class="global-container">
       <form class="data-container">
