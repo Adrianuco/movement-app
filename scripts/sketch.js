@@ -11,13 +11,15 @@ function metersToPixels(value) {
 }
 
 function setup() {
-  createCanvas(1000, 600);
+  const canvas = createCanvas(1000, 600);
+
+  canvas.parent("canvas-container");
 
   // Crear entorno
   entorno = new Entorno();
 
   const x0 = 0;
-  const y0 = 200;
+  const y0 = 2;
 
   const objetivoX = 50;
   const objetivoY = 60;

@@ -5,8 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <h1>Simulación de Movimientos Físicos</h1>
+    </header>
+    <main class="global-container">
+      <form class="data-container">
+        <fieldset class="data-objetivo">
+          <legend>Datos del Objetivo</legend>
+          <div class="input-container">
+            <label for="objetvivoX">Posicion X (m)</label>
+            <input type="text" name="objetivoX" id="objetivoX" />
+          </div>
+          <div class="input-container">
+            <label for="objetvivoY">Posicion Y (m)</label>
+            <input type="text" name="objetivoY" id="objetivoY" />
+          </div>
+        </fieldset>
+        <fieldset class="data-proyectil">
+          <legend>Datos del Proyectil</legend>
+          <div class="input-container">
+            <label for="proyectilX">Posicion X (m)</label>
+            <input type="text" name="proyectilX" id="proyectilX" />
+          </div>
+          <div class="input-container">
+            <label for="proyectilY">Posicion Y (m)</label>
+            <input type="text" name="proyectilY" id="proyectilY" />
+          </div>
+          <div class="input-container">
+            <label for="proyectilV">Velocidad Inicial (m/s)</label>
+            <input type="text" name="proyectilV" id="proyectilV" />
+          </div>
+        </fieldset>
+        <div class="button-container">
+          <button>Restablecer</button>
+          <button>Aplicar</button>
+        </div>
+      </form>
+      <div id="canvas-container"></div>
+    </main>
     <script src="scripts/physics.js"></script>
     <script src="scripts/objects.js"></script>
     <script src="scripts/sketch.js"></script>
